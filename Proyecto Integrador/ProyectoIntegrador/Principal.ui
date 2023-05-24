@@ -1,0 +1,1377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>myFrame</class>
+ <widget class="QMainWindow" name="myFrame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>593</width>
+    <height>723</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget{  background: qradialgradient(cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 #000000, stop:0.3 #111111, stop:0.7 #222222, stop:1 #333333);}
+
+
+QStatusBar {
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  color: #FFF;
+}
+
+
+QMenuBar {
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  color: #FFF;
+}
+
+QMenuBar::item {
+  padding: 5px 10px;
+}
+
+QMenuBar::item:selected {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QMenu {
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  color: #FFF;
+}
+
+QMenu::item {
+  padding: 5px 20px;
+}
+
+QMenu::item:selected {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+
+QLineEdit {
+  font-family: &quot;Arial&quot;, sans-serif;
+}
+
+QPushButton {
+  font-family: &quot;Roboto&quot;, sans-serif;
+}
+
+QLabel {
+  font-family: &quot;Times New Roman&quot;, serif;
+}
+
+QMenuBar {
+  font-family: &quot;Helvetica&quot;, sans-serif;
+}
+
+QStatusBar {
+  font-family: &quot;Open Sans&quot;, sans-serif;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="lw_datos_potenciometros">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>480</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListWidget {
+  color: #FFF;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border: none;
+}
+
+QListWidget::Item {
+  padding: 5px;
+}
+
+QListWidget::Item:hover {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QListWidget::Item:selected {
+  background-color: rgb(85, 170, 255);
+  color: #FFF;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>490</y>
+      <width>211</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Max:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Mediana:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLineEdit" name="txt_promedio">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+  border: 2px solid rgb(37, 39, 48);
+  border-radius: 20px;
+  color: #FFF;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLineEdit:hover {
+  border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+  border: 2px solid rgb(85, 170, 255);
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLineEdit" name="txt_max">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+  border: 2px solid rgb(37, 39, 48);
+  border-radius: 20px;
+  color: #FFF;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLineEdit:hover {
+  border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+  border: 2px solid rgb(85, 170, 255);
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLineEdit" name="txt_mediana">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+  border: 2px solid rgb(37, 39, 48);
+  border-radius: 20px;
+  color: #FFF;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLineEdit:hover {
+  border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+  border: 2px solid rgb(85, 170, 255);
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLineEdit" name="txt_min">
+       <property name="font">
+        <font>
+         <family>Arial,sans-serif</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+  border: 2px solid rgb(37, 39, 48);
+  border-radius: 20px;
+  color: #FFF;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLineEdit:hover {
+  border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+  border: 2px solid rgb(85, 170, 255);
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Min:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Promedio:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>110</y>
+      <width>395</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="0">
+      <widget class="QPushButton" name="btn_foco1">
+       <property name="font">
+        <font>
+         <family>Roboto,sans-serif</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  color: #FFF;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border: 1px solid rgb(37, 39, 48);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+QPushButton:hover {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border-color: rgb(48, 50, 62);
+}
+
+QPushButton:pressed {
+  background-color: rgba(43, 45, 56, 1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QPushButton:focus {
+  outline: none;
+}
+
+QPushButton:disabled {
+  background-color: rgba(34, 36, 44, 0.4); /* Ajusta la opacidad según tus preferencias */
+  color: rgba(255, 255, 255, 0.6); /* Ajusta la opacidad según tus preferencias */
+  border-color: rgba(37, 39, 48, 0.4); /* Ajusta la opacidad según tus preferencias */
+}
+
+QPushButton QLabel {
+  font-size: 12px; /* Ajusta el tamaño de fuente según tus preferencias */
+  font-weight: bold;
+  padding: 2px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>PRENDER</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="btn_foco3">
+       <property name="font">
+        <font>
+         <family>Roboto,sans-serif</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  color: #FFF;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border: 1px solid rgb(37, 39, 48);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+QPushButton:hover {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border-color: rgb(48, 50, 62);
+}
+
+QPushButton:pressed {
+  background-color: rgba(43, 45, 56, 1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QPushButton:focus {
+  outline: none;
+}
+
+QPushButton:disabled {
+  background-color: rgba(34, 36, 44, 0.4); /* Ajusta la opacidad según tus preferencias */
+  color: rgba(255, 255, 255, 0.6); /* Ajusta la opacidad según tus preferencias */
+  border-color: rgba(37, 39, 48, 0.4); /* Ajusta la opacidad según tus preferencias */
+}
+
+QPushButton QLabel {
+  font-size: 12px; /* Ajusta el tamaño de fuente según tus preferencias */
+  font-weight: bold;
+  padding: 2px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>PRENDER</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="btn_foco2">
+       <property name="font">
+        <font>
+         <family>Roboto,sans-serif</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  color: #FFF;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border: 1px solid rgb(37, 39, 48);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+QPushButton:hover {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border-color: rgb(48, 50, 62);
+}
+
+QPushButton:pressed {
+  background-color: rgba(43, 45, 56, 1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QPushButton:focus {
+  outline: none;
+}
+
+QPushButton:disabled {
+  background-color: rgba(34, 36, 44, 0.4); /* Ajusta la opacidad según tus preferencias */
+  color: rgba(255, 255, 255, 0.6); /* Ajusta la opacidad según tus preferencias */
+  border-color: rgba(37, 39, 48, 0.4); /* Ajusta la opacidad según tus preferencias */
+}
+
+QPushButton QLabel {
+  font-size: 12px; /* Ajusta el tamaño de fuente según tus preferencias */
+  font-weight: bold;
+  padding: 2px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>PRENDER</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="btn_foco4">
+       <property name="font">
+        <font>
+         <family>Roboto,sans-serif</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  color: #FFF;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border: 1px solid rgb(37, 39, 48);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+QPushButton:hover {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border-color: rgb(48, 50, 62);
+}
+
+QPushButton:pressed {
+  background-color: rgba(43, 45, 56, 1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QPushButton:focus {
+  outline: none;
+}
+
+QPushButton:disabled {
+  background-color: rgba(34, 36, 44, 0.4); /* Ajusta la opacidad según tus preferencias */
+  color: rgba(255, 255, 255, 0.6); /* Ajusta la opacidad según tus preferencias */
+  border-color: rgba(37, 39, 48, 0.4); /* Ajusta la opacidad según tus preferencias */
+}
+
+QPushButton QLabel {
+  font-size: 12px; /* Ajusta el tamaño de fuente según tus preferencias */
+  font-weight: bold;
+  padding: 2px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>PRENDER</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Times New Roman,serif</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Foco 1</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Times New Roman,serif</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Foco 2</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <family>Times New Roman,serif</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Foco 3</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <family>Times New Roman,serif</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Foco 4</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>34</x>
+      <y>10</y>
+      <width>171</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="btn_accion">
+       <property name="font">
+        <font>
+         <family>Roboto,sans-serif</family>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  color: #FFF;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border: 1px solid rgb(37, 39, 48);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+QPushButton:hover {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border-color: rgb(48, 50, 62);
+}
+
+QPushButton:pressed {
+  background-color: rgba(43, 45, 56, 1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QPushButton:focus {
+  outline: none;
+}
+
+QPushButton:disabled {
+  background-color: rgba(34, 36, 44, 0.4); /* Ajusta la opacidad según tus preferencias */
+  color: rgba(255, 255, 255, 0.6); /* Ajusta la opacidad según tus preferencias */
+  border-color: rgba(37, 39, 48, 0.4); /* Ajusta la opacidad según tus preferencias */
+}
+
+QPushButton QLabel {
+  font-size: 12px; /* Ajusta el tamaño de fuente según tus preferencias */
+  font-weight: bold;
+  padding: 2px;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>CONECTAR</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>220</y>
+      <width>461</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="1" column="1">
+      <widget class="QDial" name="dial_foco6">
+       <property name="styleSheet">
+        <string notr="true">QDial {
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border: none;
+  padding: 5px;
+}
+
+QDial::groove {
+  border: 1px solid rgb(37, 39, 48);
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  width: 15px;
+}
+
+QDial::handle {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+QDial::handle:hover {
+  background-color: rgba(43, 45, 56, 1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QDial::sub-page {
+  background-color: rgba(85, 170, 255, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QDial::add-page {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QDial::tick {
+  background-color: rgba(255, 255, 255, 0.6); /* Ajusta la opacidad según tus preferencias */
+  width: 1px;
+}
+
+QDial::tick:disabled {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_10">
+       <property name="font">
+        <font>
+         <family>Times New Roman,serif</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Foco 5</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QDial" name="dial_foco7">
+       <property name="styleSheet">
+        <string notr="true">QDial {
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border: none;
+  padding: 5px;
+}
+
+QDial::groove {
+  border: 1px solid rgb(37, 39, 48);
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  width: 15px;
+}
+
+QDial::handle {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+QDial::handle:hover {
+  background-color: rgba(43, 45, 56, 1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QDial::sub-page {
+  background-color: rgba(85, 170, 255, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QDial::add-page {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QDial::tick {
+  background-color: rgba(255, 255, 255, 0.6); /* Ajusta la opacidad según tus preferencias */
+  width: 1px;
+}
+
+QDial::tick:disabled {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QDial" name="dial_foco5">
+       <property name="styleSheet">
+        <string notr="true">QDial {
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border: none;
+  padding: 5px;
+}
+
+QDial::groove {
+  border: 1px solid rgb(37, 39, 48);
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  width: 15px;
+}
+
+QDial::handle {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+QDial::handle:hover {
+  background-color: rgba(43, 45, 56, 1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QDial::sub-page {
+  background-color: rgba(85, 170, 255, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QDial::add-page {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QDial::tick {
+  background-color: rgba(255, 255, 255, 0.6); /* Ajusta la opacidad según tus preferencias */
+  width: 1px;
+}
+
+QDial::tick:disabled {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_12">
+       <property name="font">
+        <font>
+         <family>Times New Roman,serif</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Foco 7</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_11">
+       <property name="font">
+        <font>
+         <family>Times New Roman,serif</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Foco 6</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>390</y>
+      <width>367</width>
+      <height>94</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="1" column="0">
+      <widget class="QComboBox" name="cb_potenciometros">
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+  color: #FFF;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border: 1px solid rgb(37, 39, 48);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+QComboBox:hover {
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+  border-color: rgb(48, 50, 62);
+}
+
+QComboBox::drop-down {
+  subcontrol-origin: padding;
+  subcontrol-position: top right;
+  width: 20px;
+  border-left-width: 1px;
+  border-left-color: rgb(37, 39, 48);
+  border-left-style: solid;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QComboBox::down-arrow {
+  image: url(down-arrow.png); /* Ruta de la imagen del icono de flecha hacia abajo */
+}
+
+QComboBox::down-arrow:hover {
+  image: url(down-arrow-hover.png); /* Ruta de la imagen del icono de flecha hacia abajo en hover */
+}
+
+QComboBox QAbstractItemView {
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+  color: #FFF;
+  border: 1px solid rgb(37, 39, 48);
+  selection-background-color: rgb(85, 170, 255);
+  selection-color: #FFF;
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_13">
+       <property name="font">
+        <font>
+         <family>Times New Roman,serif</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Potenciometro (Sensor):</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>10</y>
+      <width>160</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <family>Times New Roman,serif</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Conectar con:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txt_com">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+  border: 2px solid rgb(37, 39, 48);
+  border-radius: 20px;
+  color: #FFF;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLineEdit:hover {
+  border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+  border: 2px solid rgb(85, 170, 255);
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>10</y>
+      <width>160</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_14">
+       <property name="font">
+        <font>
+         <family>Times New Roman,serif</family>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
+
+QLabel:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel::hover:!pressed {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:pressed {
+  background-color: rgba(255, 255, 255, 0.3); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLabel:selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Estado de la Conexion:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txt_estado">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+  border: 2px solid rgb(37, 39, 48);
+  border-radius: 20px;
+  color: #FFF;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(34, 36, 44, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLineEdit:hover {
+  border: 2px solid rgb(48, 50, 62);
+}
+
+QLineEdit:focus {
+  border: 2px solid rgb(85, 170, 255);
+  background-color: rgba(43, 45, 56, 0.8); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLineEdit::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLineEdit::hover {
+  background-color: rgba(43, 45, 56, 0.9); /* Ajusta la opacidad según tus preferencias */
+}
+
+QLineEdit::focus {
+  background-color: rgba(43, 45, 56, 1); /* Ajusta la opacidad según tus preferencias */
+}
+</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
